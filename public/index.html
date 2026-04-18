@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stonegate — Texas Hotshot & Dually Hauling</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="nav__logo">STONEGATE</div>
+      <ul class="nav__links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero__content">
+      <h1 class="hero__title">Fast Haul Solutions<br />Across Texas &amp; Beyond</h1>
+      <p class="hero__subtitle">Hotshot &amp; Dually hauling with the speed of a large carrier and the service of a trusted partner.</p>
+      <a href="#contact" class="btn btn--primary">Get a Quote</a>
+    </div>
+  </header>
+
+  <section id="services" class="section section--dark">
+    <div class="container">
+      <h2 class="section__title">What We Haul</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon">🚚</div>
+          <h3>Hotshot Dually</h3>
+          <p>The unique combination of a hotshot truck and dually unit — fast, flexible, and able to access locations bigger rigs can't reach.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🏗️</div>
+          <h3>Heavy Equipment</h3>
+          <p>Local job-site deliveries for heavy equipment and materials, serving suppliers and contractors across Texas.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🌎</div>
+          <h3>Nationwide Shipping</h3>
+          <p>Nationwide shipments for commercial clients requiring faster turnaround without compromising safety or reliability.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">⏱️</div>
+          <h3>Oversized &amp; Special Loads</h3>
+          <p>Experienced at shipping a variety of commodities including oversized and special pieces that demand individualized attention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container container--split">
+      <div class="about__text">
+        <h2 class="section__title">Texas Means Business</h2>
+        <p>At Stonegate, business means hard work, meaningful relationships, and hard-earned success. From large corporations to small businesses, we provide on-time transportation solutions that keep your operation running.</p>
+        <p>We are safe, reliable, honest, and trustworthy — whether it's a one-time move or a regular scheduled service. Every load we haul carries our commitment to earning your trust.</p>
+        <ul class="checklist">
+          <li>On-time performance, every time</li>
+          <li>Flexible scheduling to fit your operation</li>
+          <li>Experienced with a wide variety of commodities</li>
+          <li>Individualized attention on every shipment</li>
+        </ul>
+      </div>
+      <div class="about__stats">
+        <div class="stat">
+          <span class="stat__number">100%</span>
+          <span class="stat__label">On-Time Commitment</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">TX</span>
+          <span class="stat__label">Home Base</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">48</span>
+          <span class="stat__label">States Served</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section--dark">
+    <div class="container container--narrow">
+      <h2 class="section__title">Request a Quote</h2>
+      <p class="section__subtitle">Tell us about your load and we'll get back to you fast — because in hauling, time is money.</p>
+      <form class="form" id="quoteForm">
+        <div class="form__row">
+          <input class="form__input" type="text" name="name" placeholder="Your Name" required />
+          <input class="form__input" type="email" name="email" placeholder="Email Address" required />
+        </div>
+        <div class="form__row">
+          <input class="form__input" type="tel" name="phone" placeholder="Phone Number" />
+          <input class="form__input" type="text" name="pickup" placeholder="Pickup Location" required />
+        </div>
+        <input class="form__input" type="text" name="delivery" placeholder="Delivery Location" required />
+        <textarea class="form__input form__textarea" name="details" placeholder="Describe your load (type, dimensions, weight, timeline)" rows="4"></textarea>
+        <button class="btn btn--primary btn--full" type="submit">Send Request</button>
+        <p class="form__status" id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__logo">STONEGATE</p>
+      <p>Texas Hotshot &amp; Dually Hauling &mdash; Serving Texas and the Nation</p>
+      <p class="footer__copy">&copy; <span id="year"></span> Stonegate Hauling. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
