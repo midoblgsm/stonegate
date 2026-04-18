@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /quotes/{quoteId} {
+      // Anyone can submit a quote; only the admin SDK (Functions) can read/modify them
+      allow create: if isValidQuote(request.resource.data);
+      allow read, update, delete: if false;
+    }
+  }
+
+  function isValidQuote(data) {
+    return data.keys().hasAll(['name', 'email', 'pickup', 'delivery'])
+      && data.name is string && data.name.size() > 0 && data.name.size() <= 200
+      && data.email is string && data.email.matches('.*@.*\\..*')
+      && data.pickup is string && data.pickup.size() > 0
+      && data.delivery is string && data.delivery.size() > 0;
+  }
+}
