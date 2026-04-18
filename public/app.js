@@ -16,11 +16,11 @@ if (quoteForm) {
 
     try {
       await new Promise(r => setTimeout(r, 800));
-      status.textContent = 'Request received — we\'ll be in touch shortly. For urgent loads call (800) 555-0100.';
+      status.textContent = 'Request received — we\'ll be in touch shortly. For urgent loads call (510) 786-8209.';
       this.reset();
     } catch {
       status.style.color = '#e05555';
-      status.textContent = 'Something went wrong. Please call us directly at (800) 555-0100.';
+      status.textContent = 'Something went wrong. Please call us directly at (510) 786-8209.';
     } finally {
       btn.disabled = false;
       btn.textContent = 'Send Quote Request →';
