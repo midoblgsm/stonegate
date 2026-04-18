@@ -7,17 +7,19 @@ const db = getFirestore(app);
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-document.getElementById('quoteForm').addEventListener('submit', async function (e) {
-  e.preventDefault();
-  const status = document.getElementById('formStatus');
-  const btn = this.querySelector('button[type="submit"]');
+const quoteForm = document.getElementById('quoteForm');
+if (quoteForm) {
+  quoteForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const status = document.getElementById('formStatus');
+    const btn = this.querySelector('button[type="submit"]');
 
   btn.disabled = true;
   btn.textContent = 'Sending…';
   status.style.color = '#c8922a';
   status.textContent = '';
 
-  const data = Object.fromEntries(new FormData(this));
+    const data = Object.fromEntries(new FormData(this));
 
   try {
     await addDoc(collection(db, 'quotes'), {
@@ -34,4 +36,4 @@ document.getElementById('quoteForm').addEventListener('submit', async function (
     btn.disabled = false;
     btn.textContent = 'Send Request';
   }
-});
+}, { passive: true });
