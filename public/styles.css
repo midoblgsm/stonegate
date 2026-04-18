@@ -66,7 +66,7 @@ body {
   padding: 0 2rem;
   background:
     linear-gradient(to bottom, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.9) 100%),
-    url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&q=80') center/cover no-repeat;
+    url('hero-highway.png') center/cover no-repeat;
 }
 
 .hero__content {
